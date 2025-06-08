@@ -7,12 +7,12 @@ trigger:
 - master
 
 pool:
-  name:Default
+  name: Default
 
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-- script: Build with maven
-  displayName: mvn clean package
-- script: Running jar
-  displayName: java -jar target/Mymvnnapp-1.0-SNAPSHOT.jar
+- script: mvn clean package
+  displayName: 'Build with maven'
+- script:  java -jar target/Mymvnnapp-1.0-SNAPSHOT.jar
+  displayName: 'Running jar'
